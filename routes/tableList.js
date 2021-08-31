@@ -3,7 +3,7 @@ const router = express.Router();
 const fs = require('fs');
 let tags = [];
 
-router.get('/', function(req, res, next) {
+router.get('/', function(req, res) {
   let obj = {};
   fs.readFile('data.json', 'utf-8', (err,data) => {
     let tableData = JSON.parse(data);
@@ -20,7 +20,7 @@ router.get('/', function(req, res, next) {
   });
 });
 
-router.get('/tree', function (req, res, next) {
+router.get('/tree', function (req, res) {
   fs.readFile('jsons/treeData.json', 'utf-8',(err,data) => {
     if (err) {
       res.send('获取数据失败')
@@ -30,7 +30,7 @@ router.get('/tree', function (req, res, next) {
   })
 });
 
-router.get('/classList', function (req, res, next) {
+router.get('/classList', function (req, res) {
   fs.readFile('jsons/classPage/index.json', 'utf-8', (err, data) => {
     if (err) {
       res.send('获取数据失败')
@@ -42,7 +42,7 @@ router.get('/classList', function (req, res, next) {
   })
 });
 
-router.get('/addTagList', function (req, res, next) {
+router.get('/addTagList', function (req, res) {
   fs.readFile('jsons/classPage/addTagList.json', 'utf-8', (err, data) => {
     if (err) {
       res.send('获取数据失败')
@@ -52,7 +52,7 @@ router.get('/addTagList', function (req, res, next) {
   })
 });
 
-router.get('/saveTag', function (req, res, next) {
+router.get('/saveTag', function (req, res) {
   const { query } = req;
   fs.readFile('jsons/classPage/addTagList.json', 'utf-8', (err, data) => {
     const tempAry = JSON.parse(data);
@@ -71,7 +71,7 @@ router.get('/saveTag', function (req, res, next) {
   })
 });
 
-router.get('/delTag', function (req, res, next) {
+router.get('/delTag', function (req, res) {
   const { query } = req;
   fs.readFile('jsons/classPage/index.json', 'utf-8', (err, data) => {
     const tempAry = JSON.parse(data);
