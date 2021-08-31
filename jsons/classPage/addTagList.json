@@ -1,0 +1,54 @@
+{
+  "code": 0,
+  "data": [
+    {
+      "tagId": 1,
+      "tagName": "班级一"
+    },
+    {
+      "tagId": 2,
+      "tagName": "班级二"
+    },
+    {
+      "tagId": 3,
+      "tagName": "班级三"
+    },
+    {
+      "tagId": 4,
+      "tagName": "班级四"
+    },
+    {
+      "tagId": 5,
+      "tagName": "班级五"
+    },
+    {
+      "tagId": 6,
+      "tagName": "班级六"
+    },
+    {
+      "tagId": 7,
+      "tagName": "班级七"
+    },
+    {
+      "tagId": 8,
+      "tagName": "班级八"
+    },
+    {
+      "tagId": 9,
+      "tagName": "班级九"
+    },
+    {
+      "tagId": 10,
+      "tagName": "班级十"
+    },
+    {
+      "tagId": 11,
+      "tagName": "班级十一"
+    },
+    {
+      "tagId": 12,
+      "tagName": "班级十二"
+    }
+  ],
+  "msg": "请求成功"
+}
