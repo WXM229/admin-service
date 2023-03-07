@@ -54,65 +54,41 @@ app.all('*', function(req, res, next) {
 var debug = require('debug')('my-application'); // debug模块
 app.set('port', process.env.PORT || 3000); // 设定监听端口
 
-// console.log('1');
+console.log('1');
 
-// setTimeout(function() {
-//     console.log('2');
-//     process.nextTick(function() {
-//         console.log('3');
-//     })
-//     new Promise(function(resolve) {
-//         console.log('4');
-//         resolve();
-//     }).then(function() {
-//         console.log('5')
-//     })
-// })
-// process.nextTick(function() {
-//     console.log('6');
-// })
-// new Promise(function(resolve) {
-//     console.log('7');
-//     resolve();
-// }).then(function() {
-//     console.log('8')
-// })
+setTimeout(function() {
+    console.log('2');
+    process.nextTick(function() {
+        console.log('3');
+    })
+    new Promise(function(resolve) {
+        console.log('4');
+        resolve();
+    }).then(function() {
+        console.log('5')
+    })
+})
+process.nextTick(function() {
+    console.log('6');
+})
+new Promise(function(resolve) {
+    console.log('7');
+    resolve();
+}).then(function() {
+    console.log('8')
+})
 
-// setTimeout(function() {
-//     console.log('9');
-//     process.nextTick(function() {
-//         console.log('10');
-//     })
-//     new Promise(function(resolve) {
-//         console.log('11');
-//         resolve();
-//     }).then(function() {
-//         console.log('12')
-//     })
-// })
-console.log('main1')
-process.nextTick(() => {
-  console.log('next tick1')
-})
-setTimeout(() => {
-  console.log('settimeout')
-  process.nextTick(() => {
-    console.log('next tick2')
-  })
-}, 0)
-setTimeout(() => {
-  console.log('settimeout 2')
-  process.nextTick(() => {
-    console.log('next tick3')
-  })
-})
-new Promise((res, rej) => {
-  setTimeout(() => {
-    res()
-  })
-  console.log('promise1')
-}).then(() => {
-  console.log('promise2')
+setTimeout(function() {
+    console.log('9');
+    process.nextTick(function() {
+        console.log('10');
+    })
+    new Promise(function(resolve) {
+        console.log('11');
+        resolve();
+    }).then(function() {
+        console.log('12')
+    })
 })
 
 //启动监听

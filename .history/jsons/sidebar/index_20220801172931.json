@@ -30,18 +30,7 @@
     {
       "name": "转介绍用户",
       "url": "/transfer",
-      "icon": "people"
-    },
-    {
-      "name": "表单管理",
-      "url": "/form",
-      "icon": "dataManage",
-      "children": [
-        {
-          "name": "use表单",
-          "url": "/form/index"
-        }
-      ]
+      "icon": "el-icon-user"
     }
   ],
   "msg": "请求成功"
